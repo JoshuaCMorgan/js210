@@ -1,13 +1,3 @@
-let bob = {
-  name: 'Bob',
-  age: 22,
-  height: '5 ft',
-};
+let arr = new Array(3).fill('ha');
 
-let bobKeys = Object.keys(bob);
-console.log(bobKeys);
-
-let studentBob = Object.create(bob);
-
-studentBob.year = 'Senior';
-
+console.log(arr);

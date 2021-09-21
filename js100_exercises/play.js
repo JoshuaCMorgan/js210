@@ -1,5 +1,3 @@
-function opposite(number) {
-  return -(number);
-}
+let arr = new Array(number);
 
-console.log(opposite(-5));
+console.log(arr);
