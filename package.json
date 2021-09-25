@@ -1,20 +1,23 @@
 {
-  "name": "js101",
+  "name": "js210",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This course is an Introduction to JavaScript for those who have already programmed in another language.  This course focuses more on the specifics of the JavaScript language than on programming in general.",
+  "main": "play.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaCMorgan/js210.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaCMorgan/js210/issues"
+  },
+  "homepage": "https://github.com/JoshuaCMorgan/js210#readme",
   "dependencies": {
     "readline-sync": "^1.4.10"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.2"
   }
 }
