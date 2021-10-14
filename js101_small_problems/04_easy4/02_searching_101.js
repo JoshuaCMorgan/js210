@@ -15,20 +15,31 @@ The number 17 appears in 25,15,20,17,23.
 let readlineSync = require('readline-sync');
 
 let numbers = [];
-let ordinals = ['1st', '2nd', '3rd', '4th', '5th', 'last']
+let ordinals = ['1st', '2nd', '3rd', '4th', '5th', 'last'];
 for (let index = 0; index <= 5; index += 1 ) {
   let number = readlineSync.question(`Enter the ${ordinals[index]} number: `);
   numbers.push(number);
 }
 
-let lastNumber = numbers[numbers.length - 1]
-let firstFive = numbers.slice(0,5)
+let lastNumber = numbers[numbers.length - 1];
+let firstFive = numbers.slice(0,5);
 
 let statement;
-if (firstFive.includes(lastNumber)) {
-  statement = `The number ${lastNumber} appears in ${firstFive.join(',')}.`
-  } else {
-  statement = `The number ${lastNumber} does not appear in ${firstFive.join(',')}`
+// if (firstFive.includes(lastNumber)) {
+//   statement = `The number ${lastNumber} appears in ${firstFive.join(',')}.`
+//   } else {
+//   statement = `The number ${lastNumber} does not appear in ${firstFive.join(',')}`
+// };
+
+function isGreaterThan20(element) {
+  return element > 10;
+};
+
+let result = firstFive.some(isGreaterThan20);
+if (result) {
+  statement = `There numbers (${firstFive.join(', ')}) contain a number greater than 20.`
+} else {
+  statement `The numbers (${firstFive.join(', ')}) do not contain a number greater than 20.`
 };
 
 console.log(statement);
