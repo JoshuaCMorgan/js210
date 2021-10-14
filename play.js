@@ -1,5 +1,12 @@
-let numerator = 10;
-const DENOMINATOR = 2;
+// no other code above
+function assign() {
+  let country1 = 'Liechtenstein';
+  country2 = 'Spain';
+}
 
-let answer = numerator / DENOMINATOR;
-console.log(answer);
+assign()
+console.log(country2);   // logs: Spain
+//console.log(country1);   // gets ReferenceError
+// no other code below
+
+console.log(assign);
