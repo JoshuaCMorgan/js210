@@ -9,18 +9,6 @@ example, [1, 2, 3] === [3, 2, 1] should return true.
 
 
 function areArraysEqual(array1, array2) {
-  array1 = array1.sort()
-  array2 = array2.sort()
-  for (index = 0; index <= array1.length; index += 1) {
-    if (array1[index] !== array2[index]) {
-      return false;
-    }
-  }
-  return true;
-}
-
-// alternative
-function areArraysEqual(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
   }
