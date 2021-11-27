@@ -17,9 +17,9 @@ function repeater(text) {
   for(const letter of text) {
     repeated += letter.repeat(2);
   }
-  
+  return repeated;
 }
-
+aaa
 
 function repeater(string) {
   return string.replace(/(.)/g, '$1$1');
