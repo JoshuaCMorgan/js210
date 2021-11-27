@@ -19,7 +19,7 @@ function repeater(text) {
   }
   return repeated;
 }
-aaa
+
 
 function repeater(string) {
   return string.replace(/(.)/g, '$1$1');
