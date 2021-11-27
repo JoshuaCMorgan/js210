@@ -17,7 +17,7 @@ function repeater(text) {
   for(const letter of text) {
     repeated += letter.repeat(2);
   }
-  return repeated;
+  
 }
 
 
