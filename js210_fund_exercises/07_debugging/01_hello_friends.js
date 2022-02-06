@@ -40,7 +40,7 @@ function randomGreeting() {
 
 function greet(...args) {
   const names = Array.prototype.slice.call(args);
-
+  
   for (let i = 0; i < names.length; i++) {
     const name = names[i];
     const greeting = randomGreeting;
