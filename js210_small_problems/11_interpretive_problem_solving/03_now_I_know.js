@@ -48,8 +48,6 @@ function getBoxIndex(letter) {
   return spellBlock.findIndex(block => block.includes(letter))
 }
 
-
-
 function isBlockWord(word) {
   let usedBlocks = []
   let wordCap = word.toUpperCase();
@@ -66,6 +64,7 @@ function isBlockWord(word) {
   }
   return true;
 }
+
 console.log(isBlockWord("BO")); // false
 console.log( isBlockWord('BATCH'));      // true
 console.log( isBlockWord('BUTCH'));      // false
