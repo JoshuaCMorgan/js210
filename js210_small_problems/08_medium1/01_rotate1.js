@@ -34,7 +34,7 @@
 function rotateArray(array) {
   if (!Array.isArray(array)) {
     return;
-  }
+  };
 
   if (array.length === 0) {
     return [];
@@ -50,7 +50,7 @@ console.log(rotateArray(['a', 'b', 'c']));          // ["b", "c", "a"]
 console.log(rotateArray(['a']));                    // ["a"]
 console.log(rotateArray([1, 'a', 3, 'c']));         // ["a", 3, "c", 1]
 console.log(rotateArray([{ a: 2 }, [1, 2], 3]));    // [[1, 2], 3, { a: 2 }]
-console.log(rotateArray([])  === []);                     // []
+console.log(rotateArray([]));                     // []
 
 // return `undefined` if the argument is not an array
 console.log(rotateArray());                         // undefined
