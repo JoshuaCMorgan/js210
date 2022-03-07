@@ -44,15 +44,25 @@ wordToDigit('Please call me at five five five one two three four. Thanks.');
 
 -- Code:
 */
-const toDigit = (word) => {
-  return ['zero', 'one', 'two', 'three',
-  'four', 'five', 'six', 'seven',
-  'eight', 'nine'].indexOf(word.toLowerCase());
-}
+const NUM_WORDS = {
+  zero:  0,
+  one:   1,
+  two:   2,
+  three: 3,
+  four:  4,
+  five:  5,
+  six:   6,
+  seven: 7,
+  eight: 8,
+  nine:  9,
+};
 
-function wordToDigit(text) {
-  const regex = /\b(zero|one|two|three|four|five|six|seven|eight|nine)\b/gi
-  return text.replace(regex, toDigit);
+function wordToDigit(sentence) {
+ Object.keys(NUM_WORDS).forEach(word => {
+    let regex = new RegExp('\\b' + word + '\\b', 'g');
+    sentence = sentence.replace(regex, NUM_WORDS[word]);
+ })
+ console.log(sentence)
 }
 
 // number word is converted to digit

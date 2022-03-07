@@ -45,7 +45,6 @@ function minilang(operations) {
   let commands = operations.split(' ');
 
   commands.forEach(token => {
-    
     switch(token) {
       case 'PUSH':
         stack.push(register);
@@ -71,8 +70,8 @@ function minilang(operations) {
         case 'PRINT':
           console.log(register);
           break;
-        default:
-          register = parseInt(token, 10);
+      default:
+        register = parseInt(token, 10);
     }
   })
 }
