@@ -82,10 +82,8 @@ function isValid(angles) {
   const equalToZero = (value) => value === 0;
 
   if (angles.reduce(sum) !== 180) {
-    //console.log('sum not equal to zero');
     return false;
   } else if (angles.some(equalToZero)) {
-   //console.log('one angle is equal to zero');
    return false;
   } else {
     return true;
