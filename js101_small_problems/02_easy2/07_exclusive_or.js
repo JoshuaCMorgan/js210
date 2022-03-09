@@ -14,7 +14,7 @@ are looking for a boolean result instead of a truthy/falsy value as returned by 
 // if first is true and second false, return true
 function xor(firstArg, secondArg) {
   if ((firstArg && secondArg)) {
-    return false; 
+    return false;
   } else if ((firstArg || secondArg) && (firstArg && secondArg)) {
     return false;
   } else return true;

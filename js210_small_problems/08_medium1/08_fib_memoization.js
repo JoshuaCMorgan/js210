@@ -1,3 +1,4 @@
+
 const fibKey = {
   4: 3,
   5: 5,
@@ -11,10 +12,29 @@ function fibonacci(nth) {
     return fibKey[nth];
   } else {
     fibKey[nth] = fibonacci(nth - 1) + fibonacci(nth - 2);
+    return fibKey[nth];
   }
-  console.log(fibKey)
-  return fibKey[nth];
 }
+
+/* ALTERNATIVE:
+
+const fibonacci = (() => { 
+  const memo = {
+  }
+  return (nth) => {
+    if (nth <= 2) {
+      return 1;
+    } else if (memo[nth]) {
+      return memo[nth];
+    } else {
+      memo[nth] = fibonacci(nth - 1) + fibonacci(nth - 2);
+      return memo[nth];
+    }
+    
+  }
+ 
+})();
+*/
 
 console.log(fibonacci(1));       // 1
 console.log(fibonacci(2));       // 1
