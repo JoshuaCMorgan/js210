@@ -5,8 +5,22 @@
   - Output: array of same numbers ordered least to greatest value.
   - Model the problem:
   - Rules:
-    - keep looping through numbers until no swapping has taken place
-    - if a swap has taken place, iterate again to check for sorting.
+    - loop through all numbers  for sorting as long a one swap has occured 
+    - if swaping doesn't take place,
+      - then stop looping through numbers for sorting.
+      - return array
+    - evaluation through iteration
+      - two elements at a time
+      - if first is less than or equal to second, 
+        don't swap, 
+        continue to next two set of elements.
+      - otherwise, swap 
+        - element at current index with element at next index
+        - and when go through another cycle of iteration.
+    - After iterating through all elements
+      - if no swapping has occured, stop looping
+      - otherwise, loop again. 
+    
     - evaluate each element with next element
       [2, 1, 8, 7]
       [2, 1] [1, 8] [ 8, 7] (for understanding only)
@@ -49,20 +63,22 @@ console.log(array3);    // ["Alice", "Bonnie", "Kim", "Pete", "Rachel", "Sue", "
   array
 
 -- Algorithm:
-do sort the array
-  set swap = false (if swapping takes place at any time, set to true )
-    
-    iterate through index values up to but not including last
-    if current index value is greater than next index value
-      set currentIndValue variable to value at first indexed position
-      set nextIndValue variable to next
-      set first to next, second to current
-      set swap to true
-    else, let it be
-  while swap is equal to true, sort the array
+  iterate through array and break out only if no swapping has occured.
+  set swapped to false
+  iterate through index values up to second from last
+    if value at current index is less than or equal to value at second index
+      continue to next index num;
+
+    swap value at current index with value at next index
+    set swapped to true
+
+    if swapped is false, break out of ieration cycle
+
+
 
 -- Code:
 */
+
 function bubbleSort(array) {
   while (true) {
     let swapped = false;
@@ -86,7 +102,6 @@ function swap(array, idx1, idx2) {
   array[idx1] = array[idx2];
   array[idx2] = temp;
 }
-
 // return original if no swap
 bubbleSort([1, 2]) // [1, 2]
 
